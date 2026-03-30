@@ -212,6 +212,26 @@ document.addEventListener('DOMContentLoaded', () => {
   if(facufiModal) facufiModal.addEventListener('click', (e) => { if (e.target === facufiModal) facufiModal.classList.remove('active'); });
   if(facufiPrev) facufiPrev.addEventListener('click', (e) => { e.stopPropagation(); curFacufi = (curFacufi > 0) ? curFacufi - 1 : facufiData.length - 1; updateFacufi(); });
   if(facufiNext) facufiNext.addEventListener('click', (e) => { e.stopPropagation(); curFacufi = (curFacufi < facufiData.length - 1) ? curFacufi + 1 : 0; updateFacufi(); });
+  // ── CERTIFICATE VIEWER MODAL ──
+  window.openCertModal = function(src, title) {
+    const modal = document.getElementById('generic-cert-modal');
+    if (!modal) return;
+    const modalImg = document.getElementById('cert-modal-img');
+    const modalTitle = document.getElementById('cert-modal-title');
+    
+    modalImg.src = src;
+    modalTitle.innerText = title;
+    modal.classList.add('active');
+  };
+
+  const genericCertModal = document.getElementById('generic-cert-modal');
+  if(genericCertModal) {
+    genericCertModal.addEventListener('click', (e) => {
+      if (e.target === genericCertModal) {
+        genericCertModal.classList.remove('active');
+      }
+    });
+  }
 
   // ── NAVBAR SCROLL EFFECT ──
   const navbar = document.querySelector('#navbar');
