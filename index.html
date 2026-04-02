@@ -650,9 +650,17 @@
       <div style="position: relative; border-radius: 12px; overflow: hidden; display: inline-block; background: var(--bg-deep); padding: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.8);">
         
         <!-- Watermark / Safeguard texts -->
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 10; display: flex; align-items: center; justify-content: center; opacity: 0.15; flex-direction: column;">
-          <div style="transform: rotate(-30deg); font-size: 3rem; font-weight: 900; color: white; letter-spacing: 5px; text-shadow: 2px 2px 10px #000; white-space: nowrap;">Copia de Evaluación</div>
-          <div style="transform: rotate(-30deg); font-size: 1.5rem; font-weight: 700; color: white; margin-top: 2rem;">Protegido · Calidad Reducida</div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 20; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; opacity: 0.6; overflow: hidden;">
+          <!-- Repeating Pattern -->
+          <div style="width: 100%; display: flex; justify-content: space-around; transform: rotate(-25deg); opacity: 0.9;">
+            <div style="font-size: 2.2rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">COPIA PROTEGIDA</div>
+            <div style="font-size: 2.2rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">REDUCCIÓN DE CALIDAD</div>
+            <div style="font-size: 2.2rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">PROPIEDAD DE JOSE MENDOZA</div>
+          </div>
+          <div style="width: 100%; display: flex; justify-content: space-around; transform: rotate(-25deg); opacity: 0.6;">
+            <div style="font-size: 1.8rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">EXCLUSIVO PARA EVALUACIÓN</div>
+            <div style="font-size: 1.8rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">NO ORIGINAL</div>
+          </div>
         </div>
 
         <img id="cert-modal-img" src="" alt="Certificado" oncontextmenu="return false;" draggable="false" style="max-width: 100%; max-height: 70vh; pointer-events: none; user-select: none; border-radius: 8px;">
