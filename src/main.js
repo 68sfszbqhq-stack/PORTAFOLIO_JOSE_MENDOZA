@@ -243,6 +243,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ── MOBILE NAV TOGGLE ──
+  const navToggle = document.querySelector('#nav-toggle');
+  const navLinksEl = document.querySelector('#nav-links');
+  if (navToggle && navbar && navLinksEl) {
+    navToggle.addEventListener('click', () => {
+      const open = navbar.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navLinksEl.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navbar.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   // ── ANIMATED COUNTERS ──
   function animateCounter(el, target, suffix = '') {
     let start = 0;
@@ -255,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
         start = target;
         clearInterval(timer);
       }
-      el.textContent = (suffix === '+' ? '+' : '') + Math.floor(start) + (suffix === 'k' ? 'k' : '');
+      el.textContent = Math.floor(start) + (suffix === '+' ? '+' : '') + (suffix === 'k' ? 'k' : '');
     }, step);
   }
 
@@ -268,8 +284,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entry.isIntersecting && !countersRan) {
           countersRan = true;
           animateCounter(document.querySelector('#stat-medallas'), 26);
-          animateCounter(document.querySelector('#stat-colaboradores'), 300);
-          animateCounter(document.querySelector('#stat-anos'), 15);
+          animateCounter(document.querySelector('#stat-colaboradores'), 300, '+');
+          animateCounter(document.querySelector('#stat-anos'), 16);
           animateCounter(document.querySelector('#stat-universidades'), 2);
           obs.disconnect();
         }
@@ -309,5 +325,18 @@ document.addEventListener('DOMContentLoaded', () => {
       a.style.color = '';
       if (a.getAttribute('href') === `#${current}`) a.style.color = '#f1f5f9';
     });
+  });
+
+  // ── HISTORY REEL INFINITE LOOP ──
+  const tracks = ['history-reel-track-1', 'history-reel-track-2'];
+  tracks.forEach(id => {
+    const track = document.getElementById(id);
+    if (track) {
+      const items = [...track.children];
+      items.forEach(item => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+      });
+    }
   });
 });

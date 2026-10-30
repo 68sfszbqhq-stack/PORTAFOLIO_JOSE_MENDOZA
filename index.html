@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jose Roberto Mendoza | Cultura Física · Desarrollo · IA</title>
-  <meta name="description" content="Licenciado en Cultura Física, desarrollador de soluciones educativas con IA y docente universitario. 26 medallas nacionales en tiro con arco. BUAP · IBERO Puebla." />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>José Roberto Mendoza | Gestión Deportiva · Bienestar · Tecnología</title>
+  <meta name="description" content="Licenciado en Cultura Física con maestría en curso en Alta Dirección de Entidades Deportivas. Programas de bienestar en IBERO Puebla y BUAP, metodólogo de alto rendimiento en INPODE, equipo de resultados de la Federación Mexicana de Tiro con Arco y apps propias de gestión deportiva." />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Fonts: Archivo (display) · IBM Plex Sans (body) · IBM Plex Mono (data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <!-- Main Styles -->
   <link rel="stylesheet" href="./src/style.css">
 </head>
@@ -22,17 +22,22 @@
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <div class="nav-logo">JRM<span class="nav-dot">.</span></div>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="#hero">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre Mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#certificaciones">Certificaciones</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <a href="./public/profile.jpg" download class="nav-cta" id="download-cv-btn">
-        <i class="fa-solid fa-download"></i> Descargar CV
-      </a>
+      <div class="nav-right">
+        <a class="nav-cta" href="./cv/CV_Jose_Roberto_Mendoza_Mendoza.pdf" download id="print-cv-btn" style="text-decoration: none;">
+          <i class="fa-solid fa-file-pdf"></i> Descargar CV
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -51,16 +56,17 @@
         </div>
       </div>
       <div class="hero-text-col">
-        <span class="hero-eyebrow">Cultura Física · Tecnología · IA</span>
-        <h1 class="hero-name">Jose Roberto<br><span class="hero-name-accent">Mendoza Mendoza</span></h1>
-        <p class="hero-tagline">"Del baile al teclado.<br>Del arco y las flechas al algoritmo."</p>
+        <span class="hero-eyebrow">Gestión deportiva · Programas de bienestar · Tecnología e IA aplicada</span>
+        <h1 class="hero-name">José Roberto<br><span class="hero-name-accent">Mendoza Mendoza</span></h1>
+        <p class="hero-tagline">Licenciado en Cultura Física · Maestría en Alta Dirección de Entidades Deportivas y Recreativas (en curso)</p>
         <p class="hero-sub">
-          Licenciado en Cultura Física convertido en desarrollador de soluciones educativas con IA.
-          Entreno en <strong>BiBes Tu (BUAP)</strong> e <strong>Ibero Activate (IBERO)</strong> a cientos de universitarios cada semana.
+          <strong>16 años en el deporte: atleta, entrenador estatal de tiro con arco, metodólogo de alto rendimiento en el INPODE y hoy al frente de programas de bienestar en la IBERO Puebla y la BUAP.</strong>
+          Formo parte del equipo de resultados de la Federación Mexicana de Tiro con Arco, incluida la Copa del Mundo Puebla 2026. Además construyo mis propias apps para planear, llevar asistencia y medir resultados, trabajando con agentes de IA.
         </p>
         <div class="hero-chips">
+          <span class="chip gold"><i class="fa-solid fa-bullseye"></i> FMTA · Comité Nacional de Resultados</span>
           <span class="chip"><i class="fa-solid fa-university"></i> BUAP · IBERO</span>
-          <span class="chip"><i class="fa-brands fa-github"></i> GitHub: 68sfszbqhq-stack</span>
+          <span class="chip"><i class="fa-solid fa-award"></i> USICAMM EMS 2026-2027 · Lugar 10</span>
           <span class="chip"><i class="fa-solid fa-location-dot"></i> Puebla, México</span>
         </div>
         <div class="hero-actions">
@@ -78,23 +84,65 @@
   <section class="stats-bar" id="stats">
     <div class="stats-inner">
       <div class="stat-item" data-target="26">
-        <span class="stat-num" id="stat-medallas">0</span>
+        <span class="stat-num" id="stat-medallas">26</span>
         <span class="stat-label">Medallas Nacionales</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item" data-target="300">
-        <span class="stat-num" id="stat-colaboradores">0</span>
-        <span class="stat-label">Colaboradores/sem impactados</span>
+        <span class="stat-num" id="stat-colaboradores">300+</span>
+        <span class="stat-label">Impacto semanal en colaboradores universitarios</span>
       </div>
       <div class="stat-divider"></div>
-      <div class="stat-item" data-target="15">
-        <span class="stat-num" id="stat-anos">0</span>
+      <div class="stat-item" data-target="16">
+        <span class="stat-num" id="stat-anos">16</span>
         <span class="stat-label">Años de trayectoria</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item" data-target="2">
-        <span class="stat-num" id="stat-universidades">0</span>
+        <span class="stat-num" id="stat-universidades">2</span>
         <span class="stat-label">Universidades activas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HISTORY REELS (Two Rows) ── -->
+  <section class="history-reels-section">
+    <div class="history-reel reel-ltr">
+      <div class="reel-track" id="history-reel-track-1">
+        <!-- Baile -->
+        <div class="reel-item"><img src="/historia/baile 2.JPG" alt="Baile Fitness 1"></div>
+        <div class="reel-item"><img src="/historia/baile 3.JPG" alt="Baile Fitness 2"></div>
+        <div class="reel-item"><img src="/historia/baile 4.JPG" alt="Baile Fitness 3"></div>
+        <div class="reel-item"><img src="/historia/baile 13.jpg" alt="Baile Fitness 4"></div>
+        <div class="reel-item"><img src="/historia/baile 20.jpg" alt="Baile Fitness 5"></div>
+        <div class="reel-item"><img src="/historia/baile-final.jpg" alt="Baile Fitness Final"></div>
+        <!-- Tiro con Arco Part 1 -->
+        <div class="reel-item"><img src="/historia/competido 3 .JPEG" alt="Competencia Tiro con Arco 1"></div>
+        <div class="reel-item"><img src="/historia/competidor 1.PNG" alt="Competencia Tiro con Arco 2"></div>
+        <div class="reel-item"><img src="/historia/competidor 2.JPEG" alt="Competencia Tiro con Arco 3"></div>
+        <div class="reel-item"><img src="/historia/competidor 4.JPEG" alt="Competencia Tiro con Arco 4"></div>
+        <div class="reel-item"><img src="/historia/competidor 5.JPEG" alt="Competencia Tiro con Arco 5"></div>
+        <div class="reel-item"><img src="/historia/competidor 10.JPG" alt="Competencia Tiro con Arco 6"></div>
+        <div class="reel-item"><img src="/historia/entrenador 1.JPG" alt="Entrenador Tiro con Arco"></div>
+      </div>
+    </div>
+    
+    <div class="history-reel reel-rtl">
+      <div class="reel-track" id="history-reel-track-2">
+        <!-- Tiro con Arco Part 2 -->
+        <div class="reel-item"><img src="/historia/tiro con arco.JPG" alt="Tiro con Arco"></div>
+        <div class="reel-item"><img src="/historia/medallas.JPG" alt="Medallas Nacionales"></div>
+        <!-- Ibero -->
+        <div class="reel-item"><img src="/historia/ibero 1.JPG" alt="Ibero Activate 1"></div>
+        <div class="reel-item"><img src="/historia/ibero 2.JPG" alt="Ibero Activate 2"></div>
+        <div class="reel-item"><img src="/historia/ibero 3.jpg" alt="Ibero Activate 3"></div>
+        <div class="reel-item"><img src="/historia/ibero 4.jpg" alt="Ibero Activate 4"></div>
+        <div class="reel-item"><img src="/historia/ibero 5.jpg" alt="Ibero Activate 5"></div>
+        <div class="reel-item"><img src="/historia/ibero 6.jpg" alt="Ibero Activate 6"></div>
+        <div class="reel-item"><img src="/historia/ibero 8.jpg" alt="Ibero Activate 7"></div>
+        <div class="reel-item"><img src="/historia/ibero 9.jpg" alt="Ibero Activate 8"></div>
+        <div class="reel-item"><img src="/historia/ibero 10.jpg" alt="Ibero Activate 9"></div>
+        <div class="reel-item"><img src="/historia/iberon 7.jpg" alt="Ibero Activate 10"></div>
       </div>
     </div>
   </section>
@@ -103,33 +151,20 @@
   <section class="section sobre-mi-section" id="sobre-mi">
     <div class="content-wrapper">
       <div class="section-label">01 — Sobre Mí</div>
-      <h2 class="section-heading">Una trayectoria que no sigue<br><span class="heading-accent">el camino convencional</span></h2>
+      <h2 class="section-heading">Del entrenamiento<br><span class="heading-accent">a la gestión deportiva</span></h2>
+      <div class="profile-summary">
+        <strong>Licenciado en Cultura Física · Maestría en Alta Dirección de Entidades Deportivas (en curso).</strong> Planeo, superviso y evalúo programas deportivos y de bienestar, y llevo el registro de sus resultados.
+      </div>
       <div class="sobre-mi-grid">
         <div class="sobre-mi-text">
           <p>
-            Antes de escribir mi primera línea de código, ya entendía algo que la mayoría aprende mucho después:
-            <strong>la disciplina no se negocia</strong>.
+            Me formé como atleta y después como <strong>entrenador estatal de tiro con arco</strong> en la selección de Puebla. Ahí aprendí que un programa deportivo se sostiene con planeación, periodización y evaluación constante.
           </p>
           <p>
-            Desde niño me inicié en los <strong>bailes latinos de salón</strong> — salsa, cumbia, chachachá, danzón, bachata, reggaeton, hip hop y rock and roll — una
-            formación que hoy sigo aplicando en mis clases de <strong>Baile Fitness (programa BiBes Tu)</strong> en la BUAP y la IBERO Puebla.
+            En el <strong>Instituto Poblano del Deporte</strong> trabajé como metodólogo de alto rendimiento: planeación, periodización y análisis de pruebas físicas y técnico-tácticas para ajustar los programas de los atletas del estado. Desde 2017 formo parte del <strong>equipo de resultados de la Federación Mexicana de Tiro con Arco</strong>, incluida la Copa del Mundo Puebla 2026.
           </p>
           <p>
-            A los 16 años ingresé a la <strong>Selección Poblana de Tiro con Arco</strong>, donde viví ocho años de alta competencia.
-            Ese período me forjó de una manera que ningún curso puede replicar: entrenas bajo presión, analizas datos de
-            rendimiento en tiempo real, adaptas estrategias y aprendes a fallar rápido para corregir más rápido.
-            Resultado: <strong>26 medallas nacionales</strong> en campeonatos y olimpiadas.
-          </p>
-          <p>
-            Después de competir, <strong>entrené a la Selección Estatal</strong> y fui parte de la
-            <strong>Comisión Nacional de Resultados</strong>, operando el sistema <strong>IANSEO</strong> — el software internacional
-            de gestión de competencias — en eventos estatales y nacionales.
-          </p>
-          <p>
-            Mi carrera docente inició en educación física (preescolar, primaria, media superior) y hoy enseño
-            <strong>Cultura Digital I, II, III y Taller de Cultura Digital</strong> en el Bachillerato de Nueva Creación
-            <em>Carlos Camacho Espíritu</em>. No soy un desarrollador que estudió el cuerpo humano. Soy un profesional del
-            cuerpo humano que aprendió a desarrollar. <strong>Y esa diferencia lo es todo.</strong>
+            Hoy diseño e imparto el programa de pausas activas de la <strong>IBERO Puebla</strong>, doy baile fitness en la <strong>BUAP</strong> y soy docente en el <strong>Bachillerato Carlos Camacho Espíritu</strong> bajo el MCCEMS y la NEM. Para dar seguimiento a estos programas desarrollé mis propias herramientas: planeación de sesiones, pase de lista, evaluaciones físicas y concentrados de resultados.
           </p>
         </div>
         <div class="sobre-mi-milestones">
@@ -144,7 +179,7 @@
             <div class="milestone-icon">🏹</div>
             <div>
               <strong>16 años — 8 años de alto rendimiento</strong>
-              <p>Selección Poblana de Tiro con Arco · 26 medallas nacionales</p>
+              <p>Selección Poblana de Tiro con Arco · Atleta de Élite</p>
             </div>
           </div>
           <div class="milestone">
@@ -158,113 +193,10 @@
             <div class="milestone-icon">💻</div>
             <div>
               <strong>Actualidad</strong>
-              <p>Herramientas con IA para bienestar universitario · EduPlan MX · Ibero Activate</p>
+              <p>Maestría en Alta Dirección deportiva y apps propias de gestión, construidas con IA</p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── PROYECTOS ── -->
-  <section class="section projects-section" id="proyectos">
-    <div class="content-wrapper">
-      <div class="section-label">02 — Proyectos</div>
-      <h2 class="section-heading">Lo que construyo resuelve<br><span class="heading-accent">problemas reales</span></h2>
-      <div class="projects-grid">
-
-        <!-- EDUPLAN MX -->
-        <div class="project-card featured">
-          <div class="project-card-header">
-            <span class="project-badge">⭐ Destacado</span>
-            <div class="project-links">
-              <a href="https://github.com/68sfszbqhq-stack/EDUPLANMX" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-icon-big">📚</div>
-          <h3 class="project-title">EduPlan MX</h3>
-          <div id="open-eduplan-modal" class="project-desc" style="cursor: pointer; position: relative; padding-bottom: 5px;">
-            Plataforma para generar planes de clase contextualizados a la MCCEMS y la NEM con inteligencia artificial.
-            Integra Gemini AI para contenido educativo adaptado a la educación media superior mexicana.
-            <div style="margin-top: 8px; font-weight: bold; color: var(--accent); font-size: 0.9em;"><i class="fa-solid fa-images"></i> Ver galería del proyecto (Click aquí)</div>
-          </div>
-          <div class="project-tags">
-            <span>React</span><span>TypeScript</span><span>Gemini AI</span><span>GitHub Pages</span>
-          </div>
-          <div class="project-impact">
-            <i class="fa-solid fa-chart-line"></i> Planeaciones contextualizadas en segundos para EMS
-          </div>
-        </div>
-
-        <!-- IBERO ACTIVATE -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-badge indigo">🏥 Bienestar Universitario</span>
-            <div class="project-links">
-              <a href="https://68sfszbqhq-stack.github.io/ibero-activate/employee/rankings.html" target="_blank" title="Ver App"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/68sfszbqhq-stack/ibero-activate" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-icon-big">🏃</div>
-          <h3 class="project-title">Ibero Activate</h3>
-          <div id="open-ibero-modal" class="project-desc" style="cursor: pointer; position: relative; padding-bottom: 5px;">
-            Sistema híbrido de pase de lista y gamificación para Pausas Activas universitarias.
-            Roles Admin/Empleado, insignias, rachas, notificaciones y base de datos en tiempo real.
-            <div style="margin-top: 8px; font-weight: bold; color: var(--accent); font-size: 0.9em;"><i class="fa-solid fa-images"></i> Ver galería del proyecto (Click aquí)</div>
-          </div>
-          <div class="project-tags">
-            <span>JavaScript</span><span>Firebase</span><span>Capacitor</span><span>Gamificación</span>
-          </div>
-          <div class="project-impact">
-            <i class="fa-solid fa-users"></i> +300 colaboradores/semana · 50% menos tiempo operativo
-          </div>
-        </div>
-
-        <!-- PRÁCTICAS FACUFI -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-badge green">🎓 Institucional</span>
-            <div class="project-links">
-              <a href="https://github.com/68sfszbqhq-stack/practicas-facufi" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-icon-big">📋</div>
-          <h3 class="project-title">Prácticas FACUFI</h3>
-          <div id="open-facufi-modal" class="project-desc" style="cursor: pointer; position: relative; padding-bottom: 5px;">
-            Sistema de registro y gestión de prácticas curriculares para la Facultad de Cultura Física de la BUAP.
-            Administración institucional real.
-            <div style="margin-top: 8px; font-weight: bold; color: var(--accent); font-size: 0.9em;"><i class="fa-solid fa-images"></i> Ver galería del proyecto (Click aquí)</div>
-          </div>
-          <div class="project-tags">
-            <span>HTML</span><span>JavaScript</span><span>CSS</span>
-          </div>
-          <div class="project-impact">
-            <i class="fa-solid fa-building-columns"></i> Solución real para gestión curricular BUAP
-          </div>
-        </div>
-
-        <!-- SIMULADOR EXAMEN -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-badge amber">📝 Educativo</span>
-            <div class="project-links">
-              <a href="https://github.com/68sfszbqhq-stack/SIMULADOR-EXAMENBGO" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-icon-big">🎯</div>
-          <h3 class="project-title">Simulador Examen BGO</h3>
-          <p class="project-desc">
-            Simulador de examen de admisión a licenciaturas con lógica de evaluación interactiva,
-            retroalimentación por pregunta y resultados en tiempo real.
-          </p>
-          <div class="project-tags">
-            <span>JavaScript</span><span>HTML</span><span>CSS</span>
-          </div>
-          <div class="project-impact">
-            <i class="fa-solid fa-graduation-cap"></i> Herramienta de preparación para aspirantes
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -273,18 +205,29 @@
   <section class="section experience-section" id="experiencia">
     <div class="content-wrapper experience-grid">
       <div class="exp-left">
-        <div class="section-label">03 — Trayectoria</div>
+        <div class="section-label">02 — Trayectoria</div>
         <h2 class="section-heading">Experiencia &<br><span class="heading-accent">Formación</span></h2>
         <p class="exp-intro">
-          Dos mundos fusionados: el deporte de alto rendimiento y la tecnología educativa.
+          Entrenamiento, metodología y docencia.
           Cada etapa construyó las habilidades de la siguiente.
         </p>
         <div class="tech-stack">
-          <div class="stack-label">Stack Tecnológico</div>
+          <div class="stack-label">Áreas de dominio</div>
           <div class="stack-chips">
-            <span>React</span><span>TypeScript</span><span>JavaScript</span>
-            <span>Firebase</span><span>Gemini AI</span><span>Capacitor</span>
-            <span>HTML</span><span>CSS</span><span>Git</span><span>GitHub Pages</span>
+            <span class="mastery-high">Planeación y periodización</span>
+            <span class="mastery-high">Evaluación física y técnico-táctica</span>
+            <span class="mastery-high">Metodología de alto rendimiento</span>
+            <span class="mastery-mid">MCCEMS y NEM</span>
+            <span class="mastery-mid">Resultados de competencia (IANSEO)</span>
+            <span class="mastery-mid">Coordinación de programas de bienestar</span>
+            <span class="mastery-mid">Desarrollo de apps con IA</span>
+          </div>
+        </div>
+        <div class="tech-stack" style="margin-top: 2rem;">
+          <div class="stack-label">Idiomas</div>
+          <div class="hero-chips" style="margin-bottom: 0;">
+            <span class="chip">Español · Nativo</span>
+            <span class="chip">Inglés · Intermedio</span>
           </div>
         </div>
       </div>
@@ -294,10 +237,10 @@
           <div class="tl-item">
             <div class="tl-dot current"></div>
             <div class="tl-content">
-              <span class="tl-period">2023 — Actualidad</span>
-              <h3>Entrenador Baile Fitness & Coach Pausas Activas</h3>
-              <p class="tl-org">BUAP · Universidad Iberoamericana Puebla</p>
-              <p>Entrenador de Baile Fitness (<strong>Programa BiBes Tu</strong> · BUAP) y Coach de Pausas Activas (<strong>Ibero Activate</strong> · IBERO). Impacto a más de 300 colaboradores/semana. Herramientas digitales de gestión y reportes automatizados.</p>
+              <span class="tl-period">2017 — Actualidad</span>
+              <h3>Equipo de Resultados</h3>
+              <p class="tl-org">Federación Mexicana de Tiro con Arco · World Archery México</p>
+              <p>Integrante del Comité Nacional de Resultados: operación del sistema <strong>IANSEO</strong> para programar competencias y publicar resultados oficiales. Equipo de resultados de la Copa del Mundo de Tiro con Arco Hyundai, Puebla 2026, y de campeonatos nacionales.</p>
             </div>
           </div>
 
@@ -305,9 +248,29 @@
             <div class="tl-dot current"></div>
             <div class="tl-content">
               <span class="tl-period">2023 — Actualidad</span>
-              <h3>Docente Cultura Digital I, II, III</h3>
-              <p class="tl-org">Bachillerato Carlos Camacho Espíritu · Turno Vespertino</p>
-              <p>Cultura Digital I, II, III y Taller de Cultura Digital en el nivel medio superior. Alineación a MCCEMS y NEM.</p>
+              <h3>Entrenador Baile Fitness & Coach Pausas Activas</h3>
+              <p class="tl-org">BUAP · Universidad Iberoamericana Puebla</p>
+              <p>Diseño e imparto el programa de pausas activas <strong>Ibero Actívate</strong> para <strong>300+ colaboradores por semana</strong>, con seguimiento de participación y resultados. En la BUAP planeo y conduzco sesiones de baile fitness con dosificación de la carga según el nivel del grupo.</p>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot current"></div>
+            <div class="tl-content">
+              <span class="tl-period">2023 — Actualidad</span>
+              <h3>Docente de Cultura Digital I, II y III y Comunicación</h3>
+              <p class="tl-org">Bachillerato General Oficial Carlos Camacho Espíritu · Turno Vespertino</p>
+              <p>Docencia en Educación Media Superior bajo el MCCEMS y la NEM: planeación didáctica, evaluación formativa y trabajo colegiado.</p>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot gold"></div>
+            <div class="tl-content">
+              <span class="tl-period">2019 — 2020</span>
+              <h3>Metodólogo Deportivo · Metodología de Alto Rendimiento</h3>
+              <p class="tl-org">Instituto Poblano del Deporte (INPODE)</p>
+              <p>Planificación, periodización y seguimiento metodológico del entrenamiento de atletas de alto rendimiento del estado. Análisis de pruebas físicas y técnico-tácticas para ajustar los programas.</p>
             </div>
           </div>
 
@@ -316,7 +279,7 @@
             <div class="tl-content">
               <span class="tl-period">2016 — 2023</span>
               <h3>Docente de Educación Física</h3>
-              <p class="tl-org">Patricio de Irlanda · CEDI Montessori · Tudi Ludi</p>
+              <p class="tl-org">Patricio de Irlanda · CEDI Montessori</p>
               <p>Educación Física de <strong>maternal, preescolar y primaria</strong>. Diseño de programas didácticos y evaluación del desarrollo motor.</p>
             </div>
           </div>
@@ -325,9 +288,9 @@
             <div class="tl-dot gold"></div>
             <div class="tl-content">
               <span class="tl-period">2011 — 2020</span>
-              <h3>Deportista de Alto Rendimiento & Entrenador</h3>
-              <p class="tl-org">Selección Estatal · Arqueros Poblanos Asociación</p>
-              <p>11 años de trayectoria integral como atleta, entrenador y director técnico. <strong>26 medallas nacionales</strong> en campeonatos y olimpiadas. Apoyo técnico con el sistema <strong>IANSEO</strong> para la Comisión Nacional de Resultados en eventos estatales y nacionales.</p>
+              <h3>Atleta y Entrenador Estatal de Tiro con Arco</h3>
+              <p class="tl-org">Arqueros Poblanos Asociación, A.C. · Selección Estatal de Puebla</p>
+              <p>Atleta desde 2011 y entrenador estatal de 2015 a 2020. <strong>26 medallas nacionales</strong> entre trayectoria propia y equipos a mi cargo. Dirección técnica y organización de eventos estatales y nacionales.</p>
             </div>
           </div>
 
@@ -360,15 +323,29 @@
             <div class="edu-item">
               <i class="fa-solid fa-graduation-cap"></i>
               <div>
-                <strong>Maestría en Educación Física y Deporte Escolar</strong>
-                <span>BUAP · 2017–2018 · 50% créditos · Ponencia con reconocimiento: <em>"Medición de la atención en Arqueros Poblanos"</em> · Prospección a Beca CONACYT (UACH)</span>
+                <strong>Maestría en Alta Dirección de Entidades Deportivas y Recreativas</strong>
+                <span>Instituto de Estudios Superiores de Ingeniería Educativa (IESIE) · 2026 · En curso</span>
               </div>
             </div>
             <div class="edu-item">
               <i class="fa-solid fa-graduation-cap"></i>
               <div>
                 <strong>Licenciatura en Cultura Física</strong>
-                <span>Facultad de Cultura Física BUAP · 2011–2015 · Promedio 9.05 · Tesis: <em>"Actividad Física y Alimentación en un ambiente laboral DGIE BUAP"</em></span>
+                <span>Facultad de Cultura Física BUAP · 2011–2015 · Titulado · Tesis: <em>"Actividad Física y Alimentación en un ambiente laboral DGIE BUAP"</em></span>
+              </div>
+            </div>
+            <div class="edu-item">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <strong>Proceso de Admisión USICAMM Educación Media Superior 2026-2027</strong>
+                <span>Actividades físicas y deportivas · Lugar 10 del listado nominal</span>
+              </div>
+            </div>
+            <div class="edu-item">
+              <i class="fa-solid fa-microphone"></i>
+              <div>
+                <strong>Ponencia: "Prueba de atención en la selección universitaria de tiro con arco del Estado de Puebla"</strong>
+                <span>IV Congreso Internacional en Educación Física y Salud · Universidad Veracruzana · 2018</span>
               </div>
             </div>
           </div>
@@ -377,6 +354,123 @@
     </div>
   </section>
 
+
+  <!-- ── PROYECTOS ── -->
+  <section class="section projects-section" id="proyectos">
+    <div class="content-wrapper">
+      <div class="section-label">03 — Proyectos</div>
+      <h2 class="section-heading">Apps que diseñé<br><span class="heading-accent">y construí</span></h2>
+      <p class="exp-intro" style="max-width: 760px; margin-bottom: 2rem;">
+        Todas están en uso con personas reales. Las desarrollé trabajando con agentes de IA como equipo de programación, y algunas llevan IA integrada (Gemini) para generar planeaciones en minutos. Uso React, Next.js, JavaScript y Firebase.
+      </p>
+      <div class="projects-grid">
+
+        <!-- GESTIÓN DEPORTIVA -->
+        <div class="project-card featured">
+          <div class="project-card-header">
+            <span class="project-badge">⭐ Destacado</span>
+          </div>
+          <div class="project-icon-big">🏹</div>
+          <h3 class="project-title">Plataforma de Gestión Deportiva</h3>
+          <p class="project-desc">
+            Sistema para la Asociación Poblana de Tiro con Arco. Planeación de clases y sesiones de entrenamiento (tipo de trabajo, distancia, número de flechas, ejercicios e indicaciones), control de asistencia y expediente de cada arquero, con resguardo de resultados de competencia (reportes IANSEO) para el seguimiento del proceso deportivo.
+          </p>
+          <div class="project-tags">
+            <span>Planeación del entrenamiento</span><span>Asistencia</span><span>Expediente deportivo</span><span>Resultados IANSEO</span>
+          </div>
+          <div class="project-impact">
+            <i class="fa-solid fa-chart-line"></i> Seguimiento completo del proceso deportivo de cada arquero
+          </div>
+        </div>
+
+        <!-- GYMIBERO -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge indigo">🏋️ Gestión del Entrenamiento</span>
+          </div>
+          <div class="project-icon-big">📈</div>
+          <h3 class="project-title">GymIBERO</h3>
+          <p class="project-desc">
+            Gimnasio universitario de la IBERO Puebla. Planes semanales y mesociclos, pase de lista, cotejo semanal, evaluaciones físicas y biblioteca de ejercicios y nutrición, con paneles para entrenador, alumno y administración.
+          </p>
+          <div class="project-tags">
+            <span>Mesociclos</span><span>Evaluaciones físicas</span><span>Asistencia</span>
+          </div>
+          <div class="project-impact">
+            <i class="fa-solid fa-clipboard-check"></i> Planeación y evaluación en un solo lugar
+          </div>
+        </div>
+
+        <!-- IBERO ACTIVATE -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge indigo">🏥 Bienestar Universitario</span>
+            <div class="project-links">
+              <a href="https://68sfszbqhq-stack.github.io/ibero-activate/employee/rankings.html" target="_blank" title="Ver App"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/68sfszbqhq-stack/ibero-activate" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-icon-big">🏃</div>
+          <h3 class="project-title">Ibero Activate</h3>
+          <div id="open-ibero-modal" class="project-desc" style="cursor: pointer; position: relative; padding-bottom: 5px;">
+            Pase de lista y seguimiento de participación del programa de pausas activas de la IBERO Puebla, con insignias y rachas para motivar la constancia de los colaboradores.
+            <div style="margin-top: 8px; font-weight: bold; color: var(--accent); font-size: 0.9em;"><i class="fa-solid fa-images"></i> Ver galería del proyecto (Click aquí)</div>
+          </div>
+          <div class="project-tags">
+            <span>Asistencia</span><span>Participación</span><span>Bienestar laboral</span>
+          </div>
+          <div class="project-impact">
+            <i class="fa-solid fa-users"></i> 300+ colaboradores/semana · 50% ahorro operativo
+          </div>
+        </div>
+
+        <!-- PRÁCTICAS FACUFI -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge green">🎓 Institucional</span>
+            <div class="project-links">
+              <a href="https://github.com/68sfszbqhq-stack/practicas-facufi" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-icon-big">📋</div>
+          <h3 class="project-title">Prácticas FACUFI</h3>
+          <div id="open-facufi-modal" class="project-desc" style="cursor: pointer; position: relative; padding-bottom: 5px;">
+            Asignación y confirmación de centros de práctica curricular para la Facultad de Cultura Física de la BUAP, con control real de cupo y expedientes digitales.
+            <div style="margin-top: 8px; font-weight: bold; color: var(--accent); font-size: 0.9em;"><i class="fa-solid fa-images"></i> Ver galería del proyecto (Click aquí)</div>
+          </div>
+          <div class="project-tags">
+            <span>Gestión institucional</span><span>Expedientes</span>
+          </div>
+          <div class="project-impact">
+            <i class="fa-solid fa-building-columns"></i> Digitalización exitosa del 100% de expedientes de práctica
+          </div>
+        </div>
+
+        <!-- EDUPLAN MX -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-badge green">📚 Media Superior</span>
+            <div class="project-links">
+              <a href="https://github.com/68sfszbqhq-stack/EDUPLANMX" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-icon-big">📚</div>
+          <h3 class="project-title">EduPlan MX</h3>
+          <div id="open-eduplan-modal" class="project-desc" style="cursor: pointer; position: relative; padding-bottom: 5px;">
+            Plataforma para generar planeaciones didácticas contextualizadas al MCCEMS y la NEM. Presentada como ponencia "EduPlan MX: de 50 minutos a 5" en el 2º Encuentro de Innovación e Internacionalización Educativa, IBERO Puebla.
+            <div style="margin-top: 8px; font-weight: bold; color: var(--accent); font-size: 0.9em;"><i class="fa-solid fa-images"></i> Ver galería del proyecto (Click aquí)</div>
+          </div>
+          <div class="project-tags">
+            <span>Planeación didáctica</span><span>MCCEMS</span><span>NEM</span>
+          </div>
+          <div class="project-impact">
+            <i class="fa-solid fa-chart-line"></i> Planeación de 50 minutos a 5
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ── CERTIFICACIONES ── -->
   <section class="section certs-section" id="certificaciones">
@@ -387,23 +481,32 @@
       <div class="certs-grid-featured">
         <div class="cert-card">
           <img src="./certs/titulo.jpeg" alt="Título" onclick="openCertModal(this.src, this.alt)">
-          <div class="cert-info">Título Universitario</div>
+          <div class="cert-info">Licenciatura en Cultura Física (BUAP, 2015)</div>
         </div>
         <div class="cert-card">
           <img src="./certs/cedula.jpeg" alt="Cédula Profesional" onclick="openCertModal(this.src, this.alt)">
-          <div class="cert-info">Cédula Profesional</div>
+          <div class="cert-info">Cédula Profesional Federal</div>
         </div>
       </div>
 
       <h3 style="color: var(--text-primary); margin: 3rem 0 1.5rem; font-family: var(--font-head); font-size: 1.5rem;">Diplomas IBERO</h3>
       <div class="certs-grid">
-        <div class="cert-card"><img src="./certs/ibero_1.jpeg" alt="Diploma Ibero 1" onclick="openCertModal(this.src, this.alt)"></div>
-        <div class="cert-card"><img src="./certs/ibero_2.jpeg" alt="Diploma Ibero 2" onclick="openCertModal(this.src, this.alt)"></div>
-        <div class="cert-card"><img src="./certs/ibero_3.jpeg" alt="Diploma Ibero 3" onclick="openCertModal(this.src, this.alt)"></div>
-        <div class="cert-card"><img src="./certs/ibero_4.jpeg" alt="Diploma Ibero 4" onclick="openCertModal(this.src, this.alt)"></div>
-        <div class="cert-card"><img src="./certs/ibero_5.jpeg" alt="Diploma Ibero 5" onclick="openCertModal(this.src, this.alt)"></div>
-        <div class="cert-card"><img src="./certs/ibero_6.jpeg" alt="Diploma Ibero 6" onclick="openCertModal(this.src, this.alt)"></div>
-        <div class="cert-card"><img src="./certs/ibero_7.jpeg" alt="Diploma Ibero 7" onclick="openCertModal(this.src, this.alt)"></div>
+        <div class="cert-card">
+          <img src="./certs/ibero_1.jpeg" alt="Diplomado en Docencia Digital" onclick="openCertModal(this.src, this.alt)">
+          <div class="cert-info">Docencia Digital (IBERO, 2024)</div>
+        </div>
+        <div class="cert-card">
+          <img src="./certs/ibero_2.jpeg" alt="Certificado Bienestar" onclick="openCertModal(this.src, this.alt)">
+          <div class="cert-info">Bienestar Universitario (IBERO)</div>
+        </div>
+        <div class="cert-card">
+          <img src="./certs/ibero_3.jpeg" alt="Acreditación Ibero" onclick="openCertModal(this.src, this.alt)">
+          <div class="cert-info">Innovación Educativa (IBERO)</div>
+        </div>
+        <div class="cert-card"><img src="./certs/ibero_4.jpeg" alt="Diploma Ibero" onclick="openCertModal(this.src, 'Diploma Ibero')"></div>
+        <div class="cert-card"><img src="./certs/ibero_5.jpeg" alt="Diploma Ibero" onclick="openCertModal(this.src, 'Diploma Ibero')"></div>
+        <div class="cert-card"><img src="./certs/ibero_6.jpeg" alt="Diploma Ibero" onclick="openCertModal(this.src, 'Diploma Ibero')"></div>
+        <div class="cert-card"><img src="./certs/ibero_7.jpeg" alt="Diploma Ibero" onclick="openCertModal(this.src, 'Diploma Ibero')"></div>
       </div>
 
       <h3 style="color: var(--text-primary); margin: 3rem 0 1.5rem; font-family: var(--font-head); font-size: 1.5rem;">Tiro con Arco (Acreditaciones e Investigación)</h3>
@@ -441,40 +544,45 @@
   <section class="section contact-section" id="contacto">
     <div class="content-wrapper">
       <div class="section-label">05 — Contacto</div>
-      <h2 class="section-heading">Hablemos de<br><span class="heading-accent">tu siguiente proyecto</span></h2>
+      <h2 class="section-heading">Hablemos de<br><span class="heading-accent">tu programa deportivo</span></h2>
       <div class="contact-grid">
         <div class="contact-info">
-          <p class="contact-tagline">¿Tienes una institución, programa universitario o proyecto educativo que necesita soluciones digitales? Estoy disponible para colaboraciones y consultoría.</p>
+          <p class="contact-tagline">Disponible para planeación, coordinación y evaluación de programas deportivos y de bienestar en instituciones educativas.</p>
           <ul class="contact-list-v2">
-            <li><i class="fa-solid fa-phone"></i><span>221 376 1869</span></li>
-            <li><i class="fa-solid fa-envelope"></i><span>jose.mendozam@alumno.buap.mx</span></li>
+            <li><i class="fa-solid fa-phone"></i><a href="https://wa.me/522213761869" target="_blank" style="text-decoration: none; color: inherit;">221 376 1869</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:jose.mendoza.buap@gmail.com" style="text-decoration: none; color: inherit;">jose.mendoza.buap@gmail.com</a></li>
             <li><i class="fa-solid fa-location-dot"></i><span>Puebla, México</span></li>
           </ul>
           <div class="contact-social">
             <a href="https://github.com/68sfszbqhq-stack" target="_blank" class="social-btn">
               <i class="fa-brands fa-github"></i> GitHub
             </a>
-            <button id="open-portfolio-modal" class="social-btn amber">
-              <i class="fa-regular fa-folder-open"></i> Portafolio Completo
-            </button>
+            <a href="https://www.linkedin.com/in/jose-roberto-mendoza-mendoza-752ab5171/" target="_blank" class="social-btn">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
           </div>
         </div>
         <div class="contact-refs">
           <h3>Referencias</h3>
           <div class="ref-card">
-            <div class="ref-avatar">LC</div>
+            <div class="ref-avatar">OG</div>
             <div>
-              <strong>Mtro. Luis Agustín Cadena Espindola</strong>
-              <span>Jefe Ibero Activate</span>
-              <span><i class="fa-solid fa-phone"></i> 222 717 8609</span>
+              <strong>Lic. Óscar Gómez Acosta</strong>
+              <span>Exjefe inmediato, INPODE</span>
             </div>
           </div>
           <div class="ref-card">
-            <div class="ref-avatar">SA</div>
+            <div class="ref-avatar">LC</div>
             <div>
-              <strong>Arq. Santiago Avitia Hernandez</strong>
-              <span>Ex Pte. Fed. Mex. de Tiro con Arco</span>
-              <span><i class="fa-solid fa-phone"></i> 811 059 7582</span>
+              <strong>Mtro. Luis Agustín Cadena Espíndola</strong>
+              <span>Jefe de Ibero Actívate, IBERO Puebla</span>
+            </div>
+          </div>
+          <div class="ref-card">
+            <div class="ref-avatar">BS</div>
+            <div>
+              <strong>Dra. Beatriz Sánchez Torres</strong>
+              <span>Jefa inmediata, Bachillerato Carlos Camacho Espíritu</span>
             </div>
           </div>
         </div>
@@ -486,10 +594,11 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-logo">JRM<span>.</span></div>
-      <p>Diseñado y desarrollado por Jose Roberto Mendoza · Puebla, México · 2025</p>
+      <p>Diseñado y desarrollado por Jose Roberto Mendoza · Puebla, México · 2026</p>
       <div class="footer-links">
         <a href="https://github.com/68sfszbqhq-stack" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="mailto:jose.mendozam@alumno.buap.mx"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/jose-roberto-mendoza-mendoza-752ab5171/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:jose.mendoza.buap@gmail.com"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </div>
   </footer>
@@ -505,8 +614,8 @@
         <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 1.3rem; border-radius: 12px; margin-bottom: 1.3rem; border-left: 4px solid var(--accent);">
           <h4 style="color: var(--accent); margin-bottom: 0.7rem; font-size: 1.1rem;">Evolución Profesional</h4>
           <p style="font-size: 1rem; line-height: 1.6; color: #94a3b8;">
-            De entrenador de baile fitness a <strong style="color:#e2e8f0">desarrollador de soluciones tecnológicas</strong> que mejoran la
-            salud del trabajador universitario con <strong style="color:#e2e8f0">datos, ciencia e inteligencia artificial</strong>.
+            Programas de pausas activas y baile fitness para trabajadores universitarios: <strong style="color:#e2e8f0">diseño las sesiones, registro la asistencia</strong>
+            y <strong style="color:#e2e8f0">ajusto la carga</strong> según los resultados.
           </p>
         </div>
         <div style="background: #0f172a; border: 1px solid #1e293b; padding: 1.3rem; border-radius: 12px; margin-bottom: 1.3rem;">
@@ -514,7 +623,7 @@
           <ul style="list-style: none; padding: 0; font-size: 0.95rem; line-height: 1.6; color: #94a3b8;">
             <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
               <span style="position: absolute; left: 0;">✅</span>
-              <strong style="color:#e2e8f0">+300 colaboradores</strong> semanales impactados
+              <strong style="color:#e2e8f0">300+ colaboradores</strong> semanales impactados
             </li>
             <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
               <span style="position: absolute; left: 0;">✅</span>
@@ -604,9 +713,17 @@
       <div style="position: relative; border-radius: 12px; overflow: hidden; display: inline-block; background: var(--bg-deep); padding: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.8);">
         
         <!-- Watermark / Safeguard texts -->
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 10; display: flex; align-items: center; justify-content: center; opacity: 0.15; flex-direction: column;">
-          <div style="transform: rotate(-30deg); font-size: 3rem; font-weight: 900; color: white; letter-spacing: 5px; text-shadow: 2px 2px 10px #000; white-space: nowrap;">Copia de Evaluación</div>
-          <div style="transform: rotate(-30deg); font-size: 1.5rem; font-weight: 700; color: white; margin-top: 2rem;">Protegido · Calidad Reducida</div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 20; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; opacity: 0.6; overflow: hidden;">
+          <!-- Repeating Pattern -->
+          <div style="width: 100%; display: flex; justify-content: space-around; transform: rotate(-25deg); opacity: 0.9;">
+            <div style="font-size: 2.2rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">COPIA PROTEGIDA</div>
+            <div style="font-size: 2.2rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">REDUCCIÓN DE CALIDAD</div>
+            <div style="font-size: 2.2rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">PROPIEDAD DE JOSE MENDOZA</div>
+          </div>
+          <div style="width: 100%; display: flex; justify-content: space-around; transform: rotate(-25deg); opacity: 0.6;">
+            <div style="font-size: 1.8rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">EXCLUSIVO PARA EVALUACIÓN</div>
+            <div style="font-size: 1.8rem; font-weight: 900; color: rgba(255,255,255,1.0); text-shadow: 2px 2px 4px #000; white-space: nowrap; margin: 2rem;">NO ORIGINAL</div>
+          </div>
         </div>
 
         <img id="cert-modal-img" src="" alt="Certificado" oncontextmenu="return false;" draggable="false" style="max-width: 100%; max-height: 70vh; pointer-events: none; user-select: none; border-radius: 8px;">
